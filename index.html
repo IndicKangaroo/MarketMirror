@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>MarketMirror</title>
+</head>
+<body>
+<div class="navbar">
+    <div class="logo">
+        <div class="logoimg">
+            <img src="assets/Logo.svg" class="logo-pic">
+        </div>
+       MARKET MIRROR</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">News</a>
+      <a href="#">Location</a>
+    </div>
+</div>
+  <!-- Intro Section -->
+  <div class="intro">
+    <div class="profile">
+      <img src="assets/man.jpg" alt="Profile Picture" class="profile-pic">
+    </div>
+    <div class="text1">
+      <p>Hi there!
+      <span class="highlight">Welcome to <span class="mm">MarketMirror</span> — your trusted source for real market prices.</span>
+    </p>
+    </div>
+      
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <div class="dashboard">
+      <p>Dashboard</p>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <div class="search">
+        Search
+      </div>
+
+      <select id="price">
+        <option value="">Price</option>
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+      </select>
+
+      <select id="commodity">
+        <option value="">Commodity</option>
+        <option value="wheat">Wheat</option>
+        <option value="rice">Rice</option>
+        <option value="pulses">Pulses</option>
+      </select>
+
+      <select id="state">
+        <option value="">State</option>
+        <option value="up">Uttar Pradesh</option>
+        <option value="mh">Maharashtra</option>
+        <option value="dl">Delhi</option>
+      </select>
+
+      <select id="district">
+        <option value="">District</option>
+        <option value="agra">Agra</option>
+        <option value="pune">Pune</option>
+        <option value="south-delhi">South Delhi</option>
+      </select>
+
+      <select id="market">
+        <option value="">Market</option>
+        <option value="main">Main Market</option>
+        <option value="local">Local Market</option>
+      </select>
+
+      <input type="date" id="dateFrom" title="Date From" />
+      <button>Go</button>
+    </div>
+
+    <!-- Dummy Chart Section -->
+    <div class="chart-section">
+      <h2> Real-Time Market Trends</h2>
+      <div class="chart-placeholder">
+        <p>[ Chart Placeholder – Tomato Prices (₹ per kg) ]</p>
+      </div>
+      <div class="chart-info">
+        <p><strong>Insight:</strong> Prices have increased by 7% this week in Northern India.</p>
+      </div>
+    </div>
+    </div>
+</body>
+</html>
