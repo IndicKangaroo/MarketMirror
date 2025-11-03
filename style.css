@@ -527,3 +527,223 @@ body {
     font-size: 14px;
   }
 }
+
+/* FAQ styles */
+/* Main FAQ Container */
+.Faq{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 40px;
+}
+
+/* Divider Lines */
+.point1, .point2, .point3, .point4 {
+    position: relative;
+}
+
+.point1::after, .point2::after, .point3::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 5%;
+    right: 5%; /* use left/right instead of width to avoid overflow */
+    height: 1px;
+    background-color: rgba(0, 100, 0, 0.18);
+    pointer-events: none;
+}
+
+/* Main FAQ Header */
+.heading h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 51, 0);
+    border: none;
+    min-width: 200px;
+    padding: 15px 40px;
+    width: auto;
+    height: auto;
+    margin: 30px auto;
+    border-radius: 30px;
+    color: #ffeb99;
+    font-size: 40px; /* was 2.5rem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.point1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.point1 #head1 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgreen;
+    border: 1px solid green;
+    min-width: 150px;
+    padding: 25px 40px;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 50px 0px 0px 50px;
+    color: aliceblue;
+    font-size: 32px; /* was 2rem */
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 100, 0, 0.3);
+}
+
+/* Content Sections */
+.point1 #content1, .point2 #content2, .point3 #content3, .point4 #content4 {
+    flex: 2;
+    padding: 25px;
+    color: rgb(60, 108, 60);
+    font-size: 20px; /* was 1.2rem */
+    line-height: 36px; /* was 1.8 */
+    text-align: justify;
+    min-width: 280px;
+    max-width: 800px;
+}
+
+.point2, .point3, .point4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.point1 #head1, .point3 #head3 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgreen;
+    border: 1px solid green;
+    min-width: 150px;
+    padding: 25px 40px;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 50px 0px 0px 50px;
+    color: aliceblue;
+    font-size: 32px; /* was 2rem */
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 100, 0, 0.3);
+}
+
+/* Right-aligned Section Headers */
+.point2 #head2, .point4 #head4 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 51, 0);
+    border: none;
+    min-width: 200px;
+    padding: 30px 50px;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 0 50px 50px 0;
+    color: #ffeb99;
+    font-size: 32px; /* was 2rem */
+    text-align: center;
+    box-shadow: -4px 4px 8px rgba(0, 51, 0, 0.3);
+}
+
+/* Media Queries for Responsive Layout */
+@media screen and (max-width: 1200px) {
+    .point1, .point2, .point3, .point4 {
+        width: 95%;
+        gap: 15px;
+    }
+    
+    .point1 #head1, .point2 #head2, .point3 #head3, .point4 #head4 {
+        font-size: 28px; /* was 1.8rem (~28.8px) */
+        padding: 25px 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Stack sections vertically on tablets and phones */
+    .point1, .point2, .point3, .point4 {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Keep the visual zig-zag but stack headings below/above as needed */
+    .point2, .point4 {
+        flex-direction: column-reverse;
+    }
+
+    /* Allow the header and content blocks to shrink fully on small screens */
+    .point1 #head1, .point2 #head2, .point3 #head3, .point4 #head4 {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0; /* critical for preventing overflow */
+        border-radius: 20px;
+        margin: 10px 0;
+        font-size: 26px; /* was 1.6rem (~25.6px) */
+        padding: 20px 30px;
+        box-sizing: border-box;
+    }
+
+    .point1 #content1, .point2 #content2, .point3 #content3, .point4 #content4 {
+        width: 100%;
+        min-width: 0; /* critical override so content can wrap */
+        padding: 15px;
+        font-size: 18px; /* was 1.1rem (~17.6px) */
+        line-height: 28px; /* was 1.6 */
+        box-sizing: border-box;
+    }
+
+    /* Hide long divider lines on small screens to avoid any horizontal overflow */
+    .point1::after, .point2::after, .point3::after {
+        display: none;
+    }
+
+    .heading h1 {
+        font-size: 2rem;
+        padding: 12px 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Faq {
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .heading h1 {
+        font-size: 29px; /* was 1.8rem (~28.8px) */
+        padding: 10px 25px;
+    }
+
+    .point1 #head1, .point2 #head2, .point3 #head3, .point4 #head4 {
+        font-size: 22px; /* was 1.4rem (~22.4px) */
+        padding: 15px 25px;
+    }
+
+    .point1 #content1, .point2 #content2, .point3 #content3, .point4 #content4 {
+        font-size: 16px; /* was 1rem */
+        padding: 10px;
+    }
+}
