@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>MarketMirror</title>
 </head>
+
 <body>
-<div class="navbar">
+  <div class="navbar">
     <div class="logo">
-        <div class="logoimg">
-            <img src="assets/Logo.svg" class="logo-pic">
-        </div>
-       MARKET MIRROR</div>
+      <div class="logoimg">
+        <img src="assets/Logo.svg" class="logo-pic">
+      </div>
+      MARKET MIRROR
+    </div>
     <div class="nav-links">
       <a href="#">Home</a>
       <a href="#">News</a>
       <a href="#">Location</a>
     </div>
-</div>
+  </div>
   <!-- Intro Section -->
   <div class="intro">
     <div class="profile">
@@ -26,10 +29,11 @@
     </div>
     <div class="text1">
       <p>Hi there!
-      <span class="highlight">Welcome to <span class="mm">MarketMirror</span> — your trusted source for real market prices.</span>
-    </p>
+        <span class="highlight">Welcome to <span class="mm">MarketMirror</span> — your trusted source for real market
+          prices.</span>
+      </p>
     </div>
-      
+
   </div>
 
   <!-- Main Content -->
@@ -40,23 +44,21 @@
 
     <!-- Filter Bar -->
     <div class="filter-bar">
-      <div class="search">
-        Search
-      </div>
-
       <select id="price">
-        <option value="">Price</option>
+        <option value="">Sort by Price</option>
         <option value="low">Low to High</option>
         <option value="high">High to Low</option>
       </select>
 
       <select id="commodity">
-        <option value="">Commodity</option>
-        <option value="wheat">Wheat</option>
-        <option value="rice">Rice</option>
-        <option value="pulses">Pulses</option>
+        <option value="">All Commodities</option>
+        <option value="Tomato">Tomato</option>
+        <option value="Onion">Onion</option>
+        <option value="Potato">Potato</option>
       </select>
+      
 
+  
       <select id="state">
         <option value="">State</option>
         <option value="up">Uttar Pradesh</option>
@@ -91,51 +93,80 @@
         <p><strong>Insight:</strong> Prices have increased by 7% this week in Northern India.</p>
       </div>
     </div>
+  </div>
+  <!-- MAP Section -->
+  <div class="map-section">
+    <div class="map-header">
+      <h2>Mandi Locations</h2>
+      <p>Find the nearest market locations and their current prices</p>
     </div>
-    <!-- FAQS section -->
-        <div class="Faq">
-        <div class="heading">
-            <h1>FAQs</h1>
+    <div class="map-container">
+      <div id="mandiMap"></div>
+      <div class="map-legend">
+        <div class="legend-item">
+          <span class="legend-dot major"></span>
+          <span>Major Mandi</span>
         </div>
-        <div class="point1">
-            <div id="head1">Who are we?</div>
-            <div id="content1"> MarketMirror is a platform that provides farmers with real and reliable
-                market prices for their crops. By reducing dependence on middlemen
-                and guesswork, we help farmers make informed decisions and receive
-                fair value for their produce. Our goal is to make pricing transparent,
-                simple, and accessible to every farmer</div>
+        <div class="legend-item">
+          <span class="legend-dot local"></span>
+          <span>Local Market</span>
         </div>
-
-        <div class="point2">
-            <div id="content2"> MarketMirror gathers live price data from mandis and verified market
-                reports, filters it for accuracy, and presents it in a clear and easy format.
-                The platform also uses AI to study price trends and offer helpful insights,
-                so farmers can decide the best time and place to sell..</div>
-            <div id="head2">How does
-                MarketMirror
-                work?</div>
-        </div>
-
-        <div class="point3">
-            <div id="head3">Who are we?</div>
-            <div id="content3"> MarketMirror is a platform that provides farmers with real and reliable
-                market prices for their crops. By reducing dependence on middlemen and
-                guesswork, we help farmers make informed decisions and receive fair value
-                for their produce. Our goal is to make pricing transparent, simple, and
-                accessible to every farmer..</div>
-        </div>
-
-        <div class="point4">
-            <div id="content4"> MarketMirror is a platform that provides farmers with real and reliable
-                market prices for their crops. By reducing dependence on middlemen
-                and guesswork, we help farmers make informed decisions and receive
-                fair value for their produce. Our goal is to make pricing transparent,
-                simple, and accessible to every farmer.</div>
-            <div id="head4">How does
-                MarketMirror
-                work?</div>
-        </div>
-
+      </div>
     </div>
+  </div>
+
+  <!-- FAQS section -->
+  <div class="Faq">
+    <div class="heading">
+      <h1>FAQs</h1>
+    </div>
+    <div class="point1">
+      <div id="head1">Who are we?</div>
+      <div id="content1"> MarketMirror is a platform that provides farmers with real and reliable
+        market prices for their crops. By reducing dependence on middlemen
+        and guesswork, we help farmers make informed decisions and receive
+        fair value for their produce. Our goal is to make pricing transparent,
+        simple, and accessible to every farmer</div>
+    </div>
+
+    <div class="point2">
+      <div id="content2"> MarketMirror gathers live price data from mandis and verified market
+        reports, filters it for accuracy, and presents it in a clear and easy format.
+        The platform also uses AI to study price trends and offer helpful insights,
+        so farmers can decide the best time and place to sell..</div>
+      <div id="head2">How does
+        MarketMirror
+        work?</div>
+    </div>
+
+    <div class="point3">
+      <div id="head3">Who are we?</div>
+      <div id="content3"> MarketMirror is a platform that provides farmers with real and reliable
+        market prices for their crops. By reducing dependence on middlemen and
+        guesswork, we help farmers make informed decisions and receive fair value
+        for their produce. Our goal is to make pricing transparent, simple, and
+        accessible to every farmer..</div>
+    </div>
+
+    <div class="point4">
+      <div id="content4"> MarketMirror is a platform that provides farmers with real and reliable
+        market prices for their crops. By reducing dependence on middlemen
+        and guesswork, we help farmers make informed decisions and receive
+        fair value for their produce. Our goal is to make pricing transparent,
+        simple, and accessible to every farmer.</div>
+      <div id="head4">How does
+        MarketMirror
+        work?</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="./firebase-config.js"></script>
+    <script type="module" src="./chart.js"></script>
+    
+    <!-- Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+    <script type="module" src="./mandiMap.js"></script>
+  </div>
 </body>
+
 </html>
